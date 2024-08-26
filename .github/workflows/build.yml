@@ -5,16 +5,8 @@
 
 name: build
 on:
-  # Don't build if only text-based files were changed.
-  # Prevents waiting for unnecessary checks/actions
+  workflow_dispatch:
   push:
-    paths-ignore:
-      - '**.md'
-      - '**.txt'
-  pull_request:
-    paths-ignore:
-      - '**.md'
-      - '**.txt'
 
 jobs:
   build:
